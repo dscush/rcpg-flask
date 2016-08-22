@@ -1,0 +1,20 @@
+{
+  "name": "rcpg-flask",
+  "authors": [
+    "Dan Cusher <dscush@gmail.com>"
+  ],
+  "description": "Web UI for my random chord progression generator - using Flask",
+  "main": "app.py",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}

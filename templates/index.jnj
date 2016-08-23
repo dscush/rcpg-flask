@@ -37,7 +37,25 @@
                         <h2>Add Chords</h2>
                         <p>TODO: add instructions</p>
                     </header>
-                    TODO: Add select menu for notes
+                    <form>
+                        <div class="form-group">
+                            <label for="pitchSelect">Select pitches for this chord:</label>
+                            <select class="selectpicker" id="pitchSelect" multiple>
+                            {% for octave in range(-1,9) %}
+                                {% set outer_loop = loop %}
+                                {% for pitch in ['C', 'C#/Db', 'D', 'D#/Eb', 'E', 'F', 'F#/Gb', 'G', 'G#/Ab', 'A', 'A#/Bb', 'B',] %}
+                                {% if octave == 4 and pitch == 'C' %}
+                                <option value="{{ outer_loop.index0 * 12 + loop.index0 }}" data-subtext="Middle C">{{ pitch }} {{ octave }}</option>
+                                {% else %}
+                                <option value="{{ outer_loop.index0 * 12 + loop.index0 }}">{{ pitch }} {{ octave }}</option>
+                                {% endif %}
+                                {% endfor %}
+                            {% endfor %}
+                            </select>
+                        </div>
+                        <!-- TODO: form-group for adding next-chords, using jquery and chord list in next bootstrap col -->
+                        <button type="submit" class="btn btn-default">Add Chord</button>
+                    </form>
                     TODO: Add jquery-created list of chords to link, with corresponding weight inputs (maybe text boxes or sliders)
                 </section>
                 <section class="col-xs-12 col-sm-4">
@@ -56,9 +74,9 @@
                 </section>
             </div>
         </div>
-        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.0/js/bootstrap-select.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     </body>
 </html>

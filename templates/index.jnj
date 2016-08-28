@@ -37,10 +37,14 @@
                         <h2>Add Chords</h2>
                         <p>TODO: add instructions</p>
                     </header>
-                    <form onsubmit="addChord($('#pitchSelect').val()); return false;">
+                    <form onsubmit="app.ctlr.addChord(); return false;">
                         <div class="form-group">
-                            <label for="pitchSelect">Select pitches for this chord:</label>
-                            <select class="selectpicker" id="pitchSelect" multiple>
+                            <label for="chord-name">Chord name:</label>
+                            <input type="text" class="form-control" id="chord-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="pitch-select">Select pitches for this chord:</label>
+                            <select class="selectpicker form-control" id="pitch-select" multiple>
                             {% for octave in range(-1,9) %}
                                 {% set outer_loop = loop %}
                                 {% for pitch in ['C', 'C#/Db', 'D', 'D#/Eb', 'E', 'F', 'F#/Gb', 'G', 'G#/Ab', 'A', 'A#/Bb', 'B',] %}
@@ -53,7 +57,11 @@
                             {% endfor %}
                             </select>
                         </div>
-                        <!-- TODO: form-group for adding next-chords, using jquery and chord list in next bootstrap col -->
+                        <div class="form-group">
+                            <label for="next-chords">Next Chords:</label>
+                            <input type="text" class="form-control" id="next-chords">
+                        </div>
+                        <!-- TODO: replace next-chords input with select, using jquery to populate -->
                         <button type="submit" class="btn btn-default">Add Chord</button>
                     </form>
                     TODO: Add jquery-created list of chords to link, with corresponding weight inputs (maybe text boxes or sliders)
@@ -76,6 +84,8 @@
         </div>
 
         <script src="static/scripts/main.js"></script>
+        <script src="static/scripts/models.js"></script>
+        <script src="static/scripts/controllers.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.0/js/bootstrap-select.min.js"></script>

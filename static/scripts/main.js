@@ -1,4 +1,6 @@
-function addChord(pitches) {
-    // TODO: this
-    console.log(pitches);
-}
+'use strict';
+
+/* global Controller, Model */
+var app = {
+    ctrl: new Controller(new Model())
+};

@@ -2,5 +2,5 @@
 
 /* global Controller, Model */
 var app = {
-    ctrl: new Controller(new Model())
+    ctlr: new Controller(new Model())
 };

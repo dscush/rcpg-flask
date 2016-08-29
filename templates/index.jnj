@@ -34,6 +34,20 @@
             <div class="row">
                 <section class="col-xs-12 col-sm-4">
                     <header>
+                        <h2>Saved Generators</h2>
+                        <p>TODO: add instructions</p>
+                    </header>
+                    TODO: Add list of RCPGs saved to database
+                </section>
+                <section class="col-xs-12 col-sm-4">
+                    <header>
+                        <h2>Current Chords</h2>
+                        <p>TODO: add instructions</p>
+                    </header>
+                    <!-- TODO: Add list of chords and indication of chord status -->
+                </section>
+                <section class="col-xs-12 col-sm-4">
+                    <header>
                         <h2>Add Chords</h2>
                         <p>TODO: add instructions</p>
                     </header>
@@ -66,26 +80,12 @@
                     </form>
                     TODO: Add jquery-created list of chords to link, with corresponding weight inputs (maybe text boxes or sliders)
                 </section>
-                <section class="col-xs-12 col-sm-4">
-                    <header>
-                        <h2>Current Chords</h2>
-                        <p>TODO: add instructions</p>
-                    </header>
-                    TODO: Add list of chords with indication of status
-                </section>
-                <section class="col-xs-12 col-sm-4">
-                    <header>
-                        <h2>Saved Generators</h2>
-                        <p>TODO: add instructions</p>
-                    </header>
-                    TODO: Add list of RCPGs saved to database
-                </section>
             </div>
         </div>
 
-        <script src="static/scripts/main.js"></script>
         <script src="static/scripts/models.js"></script>
         <script src="static/scripts/controllers.js"></script>
+        <script src="static/scripts/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.0/js/bootstrap-select.min.js"></script>

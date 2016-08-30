@@ -45,6 +45,8 @@
                         <p>TODO: add instructions</p>
                     </header>
                     <!-- TODO: Add list of chords and indication of chord status -->
+                        <div class="btn-group btn-group-vertical" role="group" data-toggle="buttons">
+                        </div>
                 </section>
                 <section class="col-xs-12 col-sm-4">
                     <header>

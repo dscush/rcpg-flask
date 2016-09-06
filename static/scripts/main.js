@@ -1,6 +1,4 @@
 'use strict';
 
-/* global Controller, Model */
-var app = {
-    ctlr: new Controller(new Model())
-};
+/*global angular*/
+angular.module('RcpgApp', []);

@@ -2,6 +2,24 @@
 
 /*global angular*/
 angular.module('RcpgApp')
+    .service('SavedGenerators', function(){
+        // TODO: use ajax requests to save to and load from database
+        var that = this;
+        this.generators = [];
+        this.Generator = function(name) {
+            that.generators.push(this);
+            this.name = name;
+            this.chords = [];
+        };
+        this.Chord = function(name, pitches, nextChords) {
+            this.name = name;
+            this.pitches = pitches;
+            this.nextChords = nextChords;
+        };
+        this.Generator.prototype.addChord = function(chordName, pitches, nextChords) {
+            this.chords.push(new that.Chord(chordName, pitches, nextChords));
+        };
+    })
     .service('NoteNames', function() {
         this.allNotes = [
             'C -1',
